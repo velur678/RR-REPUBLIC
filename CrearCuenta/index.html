@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang ="es">
+<head>
+
+    <meta charset ="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel ="stylesheet" href ="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+
+	<div class="lolo">
+			<form onsubmit="event.preventDefault(); Crearcuenta();">
+			<h1>INGRESA TUS DATOS</h1>
+			<div class="input-box">
+				<input type="text" placeholder="Nombre de Usuario" id="username" required>
+				<i class='bx bxs-user' ></i>
+			</div>
+			<div class="input-box">
+				<input type="text" placeholder="Correo Electronico" required>
+				<i class='bx bxl-gmail'></i>
+			</div>
+			<div class="input-box">
+				<input type="password" placeholder="Contraseña" id="password" required>
+				<i class='bx bxs-key' ></i>
+			</div>
+			<div class="input-box">
+				<input type="text" placeholder="Confirma Contraseña" required>
+				<i class='bx bxs-lock' ></i>
+			</div>
+
+			<div class="recuerdame">
+				<label><input type="checkbox"> Recuerdamelo</label>
+			
+            </div>
+
+            <button type="submit" value="Registrar" class="btn" >Crear cuenta</button>
+
+            <div class="register-link">
+            	<p>¿Ya tienes cuenta? <a href="iniciarsesion.html">INICIAR SESIÓN</a></p>
+            </div>
+        </form>
+   </div>
+
+       <script>
+        function Crearcuenta() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Guardar datos en localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+
+            alert("Cuenta Creada Con Exito, Ahora INICIA SESIÓN.");
+            window.location.href = "iniciarsesion.html"; // Redirigir a la página de inicio de sesión
+        }
+        
+    </script>
+
+</body>
+
+</html>

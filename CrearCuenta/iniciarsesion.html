@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang ="es">
+<head>
+
+    <meta charset ="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel ="stylesheet" href ="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+
+	<div class="lolo">
+		<form onsubmit="event.preventDefault(); iniciarSesion();">
+			<h1>BIENVENIDO A REPUBLIC RECORDS</h1>
+			<div class="input-box">
+				<input type="text" placeholder="Correo Electronico" id="username" required>
+				<i class='bx bxl-gmail'></i>
+			</div>
+			<div class="input-box">
+				<input type="text" placeholder="Contraseña" id="password" required>
+				<i class='bx bxs-key' ></i>
+			</div>
+            <button type="submit" value="Iniciar Sesión" class="btn">Iniciar Sesion</button>
+                        <div class="register-link">
+            	<p>¿No tienes cuenta? <a href="index.html">CREAR CUENTA</a></p>
+            </div>
+            </div>
+
+        </form>
+   </div>
+
+       <script>
+        function iniciarSesion() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Obtener datos de localStorage
+            const storedUsername = localStorage.getItem("username");
+            const storedPassword = localStorage.getItem("password");
+
+            // Verificar credenciales
+            if (username === storedUsername && password === storedPassword) {
+                alert("Inicio de sesión Listo Bienvenido a Republic Records " + username + "!");
+                // Redirigir a una página de bienvenida (puedes crear una)
+                window.location.href = "../index.html"; 
+            } else {
+                alert("Usuario o contraseña incorrectos.");
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
