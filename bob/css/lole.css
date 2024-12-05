@@ -1,0 +1,758 @@
+ body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background:black;
+  height: 100%;
+  width: 100%;
+    list-style: none;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.card100 {
+ width: 100%;
+ height: 200px;
+ background: rgb(40,40,55);
+ background: linear-gradient(344deg, rgba(40,40,55,1) 0%, rgba(16,16,18,1) 50%);
+ box-shadow: 4px 6px 14px #00000036;
+ border-radius: 3px;
+
+ 
+
+ margin-top: 2500px;
+
+}
+
+
+:root {
+  --bg-color: #000;
+  --nav-color: #fff;
+  --main-color: #fedb62;
+  --body-color: #000;
+}
+
+
+.heade {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  padding: 1rem 8%;
+  background: var(--bg-color);
+  align-items: center;
+  width: 100%;
+  z-index: 100;
+}
+
+.log {
+  font-size: 4em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--main-color);
+  letter-spacing: .2rem;
+  margin-right: auto;
+  display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 50px;
+
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 2rem;
+  color: var(--nav-color);
+  transition: .3s all ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  display: flex;
+  color: var(--main-color);
+}
+
+#menu-icon {
+  color: white;
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3 ease;
+  margin-right: 1.5rem;
+}
+
+#menu-icon.bx-x {
+  transform: rotate(90deg);
+}
+
+.hover-icons {
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: .3s all ease;
+}
+
+.hover-icons:hover {
+  color: #919191;
+}
+
+.wrapper-icons {
+  display: flex;
+  align-items: center;
+}
+
+.vertical-line::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+}
+
+@media (max-width:768px) {
+  #menu-icon {
+    display: block;
+    margin-right: 1.5rem;
+  }
+
+  .heade {
+    justify-content: space-between;
+    padding: 1rem 4%;
+  }
+
+  .log {
+    display: block;
+  }
+
+  .logo-img {
+        max-height: 30px;
+        margin-left: 1rem;
+    }
+
+  .navbar > .vertical-line{
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .2);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar ul {
+    display: block;
+  }
+
+  .navbar ul li a {
+    width: 100%;
+    display: block;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+* ,*::after, *::before{
+ box-sizing:border-box;
+}
+
+
+/*TODO LO QUE TIENE QUE VER CON EL BANNER*/
+
+.fit-picture {
+
+  width: 750px;
+  height: 750px;
+
+ animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 45%;
+    
+  }
+
+  to {
+    margin-left: 5%;
+    
+  }
+}
+
+@keyframes slidein1 {
+  from {
+    margin-left: 0%;
+    
+  }
+
+  to {
+    margin-left: 100%;
+    
+  }
+}
+
+
+   .dj-banner{margin: 0px 0; position: relative;}
+
+   .dj-banner .dj-bg{background: rgb(87,15,8);
+background: radial-gradient(circle, rgba(87,15,8,1) 5%, rgba(254,48,29,1) 82%, rgba(161,40,27,1) 100%);
+
+    max-height: 820px}
+   .dj-banner .dj-bg img{ margin-top: 70px; padding: 0px 0;}
+   .dj-banner .dj-text{text-align: center; padding-bottom: 00px;}
+   @media screen and (min-width:765px){
+      .dj-banner .dj-bg img{margin-right: 100px;  
+
+        margin-left: 78px} 
+      .dj-banner .dj-text{position: absolute; top: 50%; left: 10%; transform: translate(-10%, -50%); width: 50%; text-align: left;}
+
+      .dj-banner .dj-text h1{
+
+         margin-left: 100%;
+          animation-duration: 3s;
+  animation-name: slidein1;
+font-size: 100px;
+} 
+      .dj-banner .dj-text h1{color: white;}
+      .dj-banner .dj-text p{font-size: calc(1.2*1.5vw); margin-left: 100%; animation-duration: 3s;
+  animation-name: slidein1;}
+       .dj-banner .dj-text p{color: white;}
+
+   }
+
+
+
+
+
+
+
+
+
+/*TARJETA DE REDES SOCIALES*/
+.card {
+  max-width: fit-content;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
+  transition: 0.5s;
+}
+
+.card:hover {
+  animation: ease-out 5s;
+  background: rgba(173, 173, 173, 0.05);
+}
+
+.card ul {
+  padding: 1rem;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.card ul li {
+  cursor: pointer;
+}
+
+.svg {
+  transition: all 0.3s;
+  /* if you find some problems change w - h : 30px*/
+  padding: 1rem;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  color: rgb(255, 174, 0);
+  fill: currentColor;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.text {
+  opacity: 0;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.3s;
+  color: rgb(255, 174, 0);
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  z-index: 9999;
+  box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),
+    -10px 0 1px rgba(153, 153, 153, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.082);
+}
+
+
+.iso-pro {
+  transition: 0.5s;
+}
+.iso-pro:hover a > .svg {
+  transform: translate(15px, -15px);
+  border-radius: 100%;
+}
+
+.iso-pro:hover .text {
+  opacity: 1;
+  transform: translate(25px, -2px) skew(-5deg);
+}
+
+.iso-pro:hover .svg {
+  transform: translate(5px, -5px);
+}
+
+.iso-pro span {
+  opacity: 0;
+  position: absolute;
+  color: #1877f2;
+  border-color: #1877f2;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+  border-radius: 50%;
+  transition: all 0.3s;
+  height: 60px;
+  width: 60px;
+}
+
+.iso-pro:hover span {
+  opacity: 1;
+}
+
+.iso-pro:hover span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.iso-pro:hover span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+
+.iso-pro:hover span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+
+
+
+
+/* Parte de productos y albumes 1 */ 
+.card1 {
+   position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+position: absolute;
+  width: 80%;
+  height: 40%;
+ backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
+    background: rgb(48,6,6);
+background: radial-gradient(circle, rgba(48,6,6,1) 42%, rgba(136,15,15,1) 89%, rgba(212,41,41,1) 100%);
+  transition: 0.5s;
+
+}
+.musica{margin: 50px;}
+/* From Uiverse.io by Navarog21 */ 
+button {
+     position: absolute;
+ 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge white;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding-bottom: 30px;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: black;
+  transition: 0.5s;
+  transform-origin: center;
+
+}
+
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: black;
+  transition: 0.5s;
+
+}
+
+button:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+button:hover {
+  box-shadow: inset 0px 0px 25px red;
+}
+.mu{margin: 15px auto;
+}
+.img1 {
+ 
+  border-radius: 0 px;
+  padding: 30px;
+  width: 300px;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float-animation {
+  animation: float 2s ease-in-out infinite;
+}
+
+
+/* From Uiverse.io by Madflows */ 
+.card3 {
+  top: 50px;
+  float: left;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 350px;
+  width: 250px;
+  min-width: 250px;
+  padding: o;
+  border-radius: 16px;
+ background: rgb(8,12,87);
+background: radial-gradient(circle, rgba(8,12,87,1) 55%, rgba(59,66,150,1) 87%, rgba(125,165,255,1) 95%, rgba(27,57,161,1) 100%);
+  box-shadow: -1rem 0 3rem #00000067;
+  transition: .2s;
+  font-family: 'Inter', sans-serif;
+  margin-left: 200px;
+}
+
+.card3:hover {
+  transform: translateY(-0.4rem);
+}
+
+.card-author {
+  position: relative;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  margin:  0 0;
+}
+
+.author-name {
+  color: #7a7a8c;
+}
+
+.author-name-prefix {
+  color: #e52e71;
+  font-weight: 600;
+  margin-top: 200px;
+}
+
+.author-avatar span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  margin: 0px;
+}
+
+.half-circle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 48px;
+  fill: none;
+  stroke: #ff8a00;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.card-header {
+  margin-bottom: auto;
+  color: #7a7a8c;
+}
+
+.card-header p {
+  font-size: 14px;
+  margin: 0px;
+  color: #7a7a8c;
+}
+
+.card-header .title {
+  font-size: 25px;
+  margin: 0px;
+  cursor: pointer;
+  font-family: 'Arial Black', sans-serif;
+}
+
+.card-header .title:hover {
+  background: linear-gradient(90deg,#ff8a00,#e52e71);
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tags {
+  margin:0px;
+  padding: .5rem 0 1rem;
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.tags a {
+  font-style: normal;
+  font-weight: 700;
+  color: #7a7a8c;
+  text-transform: uppercase;
+  font-size: .66rem;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+  padding: .2rem .85rem .25rem;
+  position: relative;
+}
+
+
+
+/* From Uiverse.io by PriyanshuGupta28 */ 
+.card4 {
+  width: 100%;
+  height: 300px;
+  margin-top: 500px;
+  border-radius: 1rem;
+  background: rgb(231,206,146);
+background: linear-gradient(90deg, rgba(231,206,146,1) 62%, rgba(136,110,58,1) 96%);
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+position: absolute;
+
+}
+
+.card5 {
+  width: 50%;
+  height: 5px;
+  margin-top: 30px;
+  border-radius: 1rem;
+  background:#886e3a;
+float: left;
+  left: 30%;
+  transform: translate(-50%, -50%);
+position: absolute;
+
+}
+
+.img2 {
+ top: 59%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+position: absolute;
+  border-radius: 0 px;
+  padding: 40px;
+  width: 700px;
+}
+
+h2 {
+     font-family:SpaceGrotesk-Light;
+  color:#886e3a;
+  line-height: 1.2;
+        font-weight: 700;
+        font-size: 150px;
+                margin-bottom: 40px;
+                margin-left: 50px;
+                margin-top: 10px;
+
+
+}
+
+
+
+
+/*este es el css de esas cartas */ 
+.card7 {
+  top: 75px;
+float: left;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 350px;
+  width: 250px;
+  min-width: 250px;
+  padding: 0;
+  border-radius: 16px;
+background: white;
+  
+  box-shadow: -1rem 0 3rem #00000067;
+  transition: .2s;
+  font-family: 'Inter', sans-serif;
+  margin-left: 125px;
+}
+.card7:hover {
+  transform: translateY(-0.4rem);
+}
+.shadow {
+ box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(190, 190, 190),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+/*este es el fondo rojo que se ve */ 
+.productos {
+   position: absolute;
+  top: 300%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+position: absolute;
+  width: 80%;
+  height: 40%;
+ backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
+    background: rgb(48,6,6);
+background: radial-gradient(circle, rgba(48,6,6,1) 42%, rgba(136,15,15,1) 89%, rgba(212,41,41,1) 100%);
+  transition: 0.5s;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.productos1 {
+   position: absolute;
+  top: 400%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+position: absolute;
+  width: 80%;
+  height: 40%;
+ backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
+    background: rgb(48,6,6);
+background: radial-gradient(circle, rgba(48,6,6,1) 42%, rgba(136,15,15,1) 89%, rgba(212,41,41,1) 100%);
+  transition: 0.5s;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.productos2 {
+   position: absolute;
+  top: 500%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+position: absolute;
+  width: 80%;
+  height: 40%;
+ backdrop-filter: blur(15px);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274), 0 5px 5px rgba(0, 0, 0, 0.164);
+    background: rgb(48,6,6);
+background: radial-gradient(circle, rgba(48,6,6,1) 42%, rgba(136,15,15,1) 89%, rgba(212,41,41,1) 100%);
+  transition: 0.5s;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.contenedor-caja-video{
+margin-top: 2100px;
+ width: 40%;
+ float: left;
+ padding: 20px;
+ margin-left: 100px;
+}
+
+.caja-video  {
+ position:relative;
+ background-color:red;
+  width: 100%;
+ padding-bottom:56.25%;
+ 
+}
+
+.caja-video::before {
+ position: absolute;
+ content:'';
+ 
+ display:block;
+ padding-bottom:56.25%;
+}
+
+.video{
+ position:absolute;
+ width: 100%;
+ height: 100%;
+
+ 
+}
